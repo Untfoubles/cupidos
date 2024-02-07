@@ -12,8 +12,19 @@ body{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center; /* Center content horizontally */
     background: #111;
+    position: relative; /* Added position relative */
+}
+
+h2 {
+    position: absolute; /* Changed to absolute */
+    top: 10vh; /* Adjusted top */
+    left: 50%; /* Adjusted left */
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: 3em;
+    color: #222;
+    z-index: 2; /* Ensure h2 is above other elements */
 }
 
 .container{
@@ -24,11 +35,12 @@ body{
     margin: 0 15px;
     background-color: #ffffff;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    z-index: 0; /* Set a lower z-index so it appears behind the h2 */
+    z-index: 1; /* Set container below h2 */
+    position: relative; /* Added position relative */
+    top: 20vh; /* Adjusted top */
 }
 
 .container header{
-    position: relative;
     font-size: 20px;
     font-weight: 600;
     color: #000000;
@@ -57,6 +69,10 @@ body{
     position: absolute;
     background-color: #ffffff;
     transition: 0.3s ease;
+    z-index: 1; /* Set form container below h2 */
+    top: 100%; /* Position it below h2 */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
 }
 
 .container form .form.second{
@@ -141,8 +157,7 @@ form .fields .input-field{
     color: #fff;
     border-radius: 5px;
     margin: 25px 0;
-    background-color: #ca62aa;
-    transition: all 0.3s linear;
+    background-color: #f73cc2;
     cursor: pointer;
     margin-top: 5%;
 }
@@ -221,15 +236,6 @@ form .buttons button,
 }
 
 /* Additional Styling for h2 */
-h2 {
-    position: relative;
-    font-size: 3em;
-    color: #222;
-    text-align: center;
-    margin-top: 10vh;
-    z-index: 1; /* Ensure the text is above other elements */
-}
-
 h2::before {
     content: attr(data-text);
     position: absolute;
