@@ -60,7 +60,7 @@ h2 {
 .container form{
     position: relative;
     margin-top: 16px;
-    min-height: 550px;
+    min-height: 500px;
     background-color: #f3f3f3;
     overflow: hidden;
 }
@@ -73,6 +73,8 @@ h2 {
     top: 100%; /* Position it below h2 */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%);
+    margin-top: -50%;
+    width: 100%;
 }
 
 .container form .form.second{
