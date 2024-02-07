@@ -5,33 +5,40 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
 }
+
+
 body{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: left;
-    background: #ca62aa;
-    background-image: url("https://i.pinimg.com/originals/98/5b/2c/985b2ce775b9058d5fdba432e360f3e8.gif");
-    background-repeat: no-repeat ;
-    background-size: cover;
+    background: #111;
+    /* background-image: url(""); */
+    /* background-repeat: no-repeat ; */
+    /* background-size: cover; */
 
 }
 .container{
-    position: relative;
-    max-width: 1000px;
-    width: 100%;
-    border-radius: 6px;
-    padding: 30px;
-    margin: 0 15px;
-    background-color: #fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    
+    
+        max-width: 1000px;
+        width: 100%;
+        border-radius: 6px;
+        /* padding: 30px; */
+        /* margin: 0 15px; */
+        background-color: #ffffff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 0; /* Set a lower z-index so it appears behind the h2 */
+        margin-top: 50%;
+   
 }
 .container header{
     position: relative;
     font-size: 20px;
     font-weight: 600;
-    color: #333;
+    color: #000000;
 }
 .container header::before{
     content: "";
@@ -47,12 +54,12 @@ body{
     position: relative;
     margin-top: 16px;
     min-height: 550px;
-    background-color: #fff;
+    background-color: #f3f3f3;
     overflow: hidden;
 }
 .container form .form{
     position: absolute;
-    background-color: #fff;
+    background-color: #ffffff;
     transition: 0.3s ease;
 }
 .container form .form.second{
@@ -76,7 +83,7 @@ form.secActive .form.first{
     font-size: 16px;
     font-weight: 500;
     margin: 6px 0;
-    color: #333;
+    color: #000000;
 }
 .container form .fields{
     display: flex;
@@ -94,13 +101,13 @@ form .fields .input-field{
 .input-field label{
     font-size: 12px;
     font-weight: 500;
-    color: #2e2e2e;
+    color: #000000;
 }
 .input-field input{
     outline: none;
     font-size: 14px;
     font-weight: 400;
-    color: #333;
+    color: #fff;
     border-radius: 5px;
     border: 1px solid #aaa;
     padding: 0 15px;
@@ -113,7 +120,7 @@ form .fields .input-field{
 }
 .input-field select
 {
-    color: #707070;
+    color: #fffefe;
 }
 
 .container form button, .backBtn{
